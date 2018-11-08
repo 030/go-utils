@@ -8,7 +8,7 @@ import (
 
 // Debug is a function that is able to enable debug logging
 func Debug() {
-	debug := flag.Bool("d", false, "Whether debug mode has to be enabled.")
+	debug := flag.Bool("d", false, "Enable debug mode.")
 
 	flag.Parse()
 
