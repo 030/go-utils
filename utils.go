@@ -2,6 +2,7 @@ package util
 
 import (
 	"flag"
+	"log"
 
 	"github.com/sirupsen/logrus"
 )
@@ -15,4 +16,10 @@ func Debug() {
 	if *debug {
 		logrus.SetLevel(logrus.DebugLevel)
 	}
+}
+
+// ErrorLineNumber is a function that adds the linenumber to the error message
+func ErrorLineNumber() {
+	// https://stackoverflow.com/a/24809859/2777965
+	log.SetFlags(log.LstdFlags | log.Lshortfile)
 }
