@@ -1,4 +1,4 @@
-package util
+package utils
 
 import (
 	"flag"
@@ -22,4 +22,11 @@ func Debug() {
 func ErrorLineNumber() {
 	// https://stackoverflow.com/a/24809859/2777965
 	log.SetFlags(log.LstdFlags | log.Lshortfile)
+}
+
+// Fatal is a function that returns the error message and an exit code of 1
+func Fatal(err error) {
+	if err != nil {
+		log.Fatal(err)
+	}
 }
