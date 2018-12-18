@@ -3,6 +3,7 @@ package utils
 import (
 	"flag"
 	"log"
+	"path/filepath"
 
 	"github.com/sirupsen/logrus"
 )
@@ -31,7 +32,7 @@ func Fatal(err error) {
 	}
 }
 
-// This function ensures that paths are compatible with the OS, e.g.:
+// CrossPlatformFilepath ensures that paths are compatible with the OS, e.g.:
 // * a\b\c will be a/b/c on linux
 // * d/e/f will be d\e\f on Windows
 func CrossPlatformFilepath(p string) string {
