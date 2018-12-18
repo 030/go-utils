@@ -38,3 +38,8 @@ func Fatal(err error) {
 func CrossPlatformFilepath(p string) string {
     return filepath.FromSlash(p)
 }
+
+// ToLinuxPath transforms back slashes to forward slashes
+func ToLinuxPath(p string) string {
+    return filepath.ToSlash(p)
+}
