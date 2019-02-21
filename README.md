@@ -18,6 +18,14 @@ import (
 
 ```
 func main() {
-	utils.Debug()
+    utils.Debug()
+    
+    logrus.Info("HelloWorld!")
 }
+```
+
+will result in:
+
+```
+time="2019-02-21T18:02:23+01:00" level=info msg=HelloWorld! func=main.main file="C:/path/to/go/src/github.com/030/some-go-project/main.go:16"
 ```
