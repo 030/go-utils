@@ -2,7 +2,6 @@ package utils
 
 import (
 	"flag"
-	"logrus"
 	"path/filepath"
 
 	"github.com/sirupsen/logrus"
