@@ -23,10 +23,10 @@ func Debug() {
 // * a\b\c will be a/b/c on linux
 // * d/e/f will be d\e\f on Windows
 func CrossPlatformFilepath(p string) string {
-    return filepath.FromSlash(p)
+	return filepath.FromSlash(p)
 }
 
 // ToLinuxPath transforms back slashes to forward slashes
 func ToLinuxPath(p string) string {
-    return filepath.ToSlash(p)
+	return filepath.ToSlash(p)
 }
