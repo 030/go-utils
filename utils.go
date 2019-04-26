@@ -1,23 +1,9 @@
 package utils
 
 import (
-	"flag"
+	"net/http"
 	"path/filepath"
-
-	"github.com/sirupsen/logrus"
 )
-
-// Debug is a function that is able to enable debug logging
-func Debug() {
-	debug := flag.Bool("d", false, "Enable debug mode.")
-	flag.Parse()
-
-	logrus.SetReportCaller(true)
-
-	if *debug {
-		logrus.SetLevel(logrus.DebugLevel)
-	}
-}
 
 // CrossPlatformFilepath ensures that paths are compatible with the OS, e.g.:
 // * a\b\c will be a/b/c on linux
@@ -29,4 +15,13 @@ func CrossPlatformFilepath(p string) string {
 // ToLinuxPath transforms back slashes to forward slashes
 func ToLinuxPath(p string) string {
 	return filepath.ToSlash(p)
+}
+
+// URLExists checks whether an URL exists
+func URLExists(url string) bool {
+	_, err := http.Get(url)
+	if err != nil {
+		return false
+	}
+	return true
 }
