@@ -1,5 +1,7 @@
 # golang-utils
 
+[![Build Status](https://travis-ci.org/030/go-utils.svg?branch=master)](https://travis-ci.org/030/go-utils)
+
 Golang Utils
 
 ```
