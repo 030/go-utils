@@ -4,8 +4,8 @@ import "testing"
 
 func TestURLExists(t *testing.T) {
 	urlHashMap := map[string]bool{
-		"http://google.com":          true,
-		"http://google444444444.com": false,
+		"http://releasesoftwaremoreoften.com":           true,
+		"http://releasesoftwaremoreoften4444444444.com": false,
 	}
 
 	for url, expectedExistence := range urlHashMap {
