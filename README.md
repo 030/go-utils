@@ -27,3 +27,17 @@ will result in:
 ```
 true
 ```
+
+## FileExists
+
+```
+func main() {
+    fmt.Println(utils.FileExists("go.mod"))
+}
+```
+
+will result in:
+
+```
+true
+```
