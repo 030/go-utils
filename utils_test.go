@@ -15,3 +15,17 @@ func TestURLExists(t *testing.T) {
 		}
 	}
 }
+
+func TestFileExists(t *testing.T) {
+	fileHashMap := map[string]bool{
+		"go.mod":  true,
+		"go.mod2": false,
+	}
+
+	for file, expectedExistence := range fileHashMap {
+		actualExistence := FileExists(file)
+		if expectedExistence != actualExistence {
+			t.Errorf("Expected that file %v existence would be %v, but was %v", file, expectedExistence, actualExistence)
+		}
+	}
+}
