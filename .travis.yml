@@ -1,6 +1,10 @@
 language: go
 go:
   - 1.12.4
+env:
+  - GIMME_OS=linux
+  - GIMME_OS=darwin
+  - GIMME_OS=windows
 script:
   - diff -u <(echo -n) <(gofmt -d ./)
   - go test -short -cover -v -coverprofile=coverage.out -covermode=atomic ./...
