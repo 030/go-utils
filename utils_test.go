@@ -18,8 +18,9 @@ func TestURLExists(t *testing.T) {
 
 func TestFileExists(t *testing.T) {
 	fileHashMap := map[string]bool{
-		"go.mod":  true,
-		"go.mod2": false,
+		"go.mod":               true,
+		"go.mod2":              false,
+		"/usr/local/something": false,
 	}
 
 	for file, expectedExistence := range fileHashMap {
