@@ -1,14 +1,12 @@
 language: go
 go:
   - 1.12.4
+os:
+  - linux
+  - osx
+  - windows
 env:
-  global:
-    - GO111MODULE=on
-    - GOARCH=amd64
-  matrix:
-    - GOOS=linux
-    - GOOS=darwin
-    - GOOS=windows
+  - GO111MODULE=on
 script:
   - diff -u <(echo -n) <(gofmt -d ./)
   - go test -short -cover -v -coverprofile=coverage.out -covermode=atomic ./...
