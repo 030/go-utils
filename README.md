@@ -10,6 +10,8 @@ and add the following to the go file:
 
 ```bash
 import (
+    "github.com/pkg/errors"
+
     "github.com/030/go-utils"
 )
 ```
