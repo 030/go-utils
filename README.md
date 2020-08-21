@@ -13,3 +13,9 @@ import (
     "github.com/030/go-utils"
 )
 ```
+
+## CheckErrorPrintStackTraceAndExit
+
+```bash
+utils.CheckErrorPrintStackTraceAndExit(errors.WithStack(err))
+```
