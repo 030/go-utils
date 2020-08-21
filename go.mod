@@ -1,3 +1,3 @@
 module github.com/030/go-utils
 
-go 1.12
+go 1.14
