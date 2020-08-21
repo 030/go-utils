@@ -1,9 +1,12 @@
 package utils
 
 import (
+	"fmt"
 	"net/http"
 	"os"
 	"path/filepath"
+
+	log "github.com/sirupsen/logrus"
 )
 
 // CrossPlatformFilepath ensures that paths are compatible with the OS, e.g.:
@@ -34,4 +37,18 @@ func FileExists(f string) bool {
 		return false
 	}
 	return true
+}
+
+func CheckError(err error) error {
+	if err != nil {
+		return err
+	}
+	return nil
+}
+
+func CheckErrorPrintStackTraceAndExit(err error) {
+	if err != nil {
+		fmt.Printf("%+v\n", err)
+		log.Fatal(err)
+	}
 }
