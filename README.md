@@ -2,42 +2,14 @@
 
 [![Build Status](https://travis-ci.org/030/go-utils.svg?branch=master)](https://travis-ci.org/030/go-utils)
 
-```
+```bash
 go get github.com/030/go-utils
 ```
 
 and add the following to the go file:
 
-```
+```bash
 import (
     "github.com/030/go-utils"
 )
-```
-
-## URLExists
-
-```
-func main() {
-    fmt.Println(utils.URLExists("http://releasesoftwaremoreoften.com"))
-}
-```
-
-will result in:
-
-```
-true
-```
-
-## FileExists
-
-```
-func main() {
-    fmt.Println(utils.FileExists("go.mod"))
-}
-```
-
-will result in:
-
-```
-true
 ```
